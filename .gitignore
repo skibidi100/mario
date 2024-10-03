@@ -1,0 +1,48 @@
+def nivel_1():
+    print("Estás en el Bosque Encantado.")
+    eleccion = input("¿Qué harías primero? A) Saltar sobre los enemigos. B) Buscar monedas. ")
+    if eleccion.upper() == "A":
+        print("Saltaste sobre los enemigos y llegaste al siguiente nivel.")
+        return True
+    elif eleccion.upper() == "B":
+        print("Buscaste monedas, pero un Goomba te sorprendió. Fin del juego.")
+        return False
+    else:
+        print("Opción no válida. Fin del juego.")
+        return False
+
+def nivel_2():
+    print("Estás en la Cueva Oscura.")
+    eleccion = input("¿Qué poder eliges? A) Superpoder para saltar más alto. B) Invisibilidad. ")
+    if eleccion.upper() == "A":
+        print("Usaste el superpoder y saltaste sobre las trampas.")
+        return True
+    elif eleccion.upper() == "B":
+        print("Te volviste invisible, pero te caíste en un agujero. Fin del juego.")
+        return False
+    else:
+        print("Opción no válida. Fin del juego.")
+        return False
+
+def nivel_3():
+    print("Estás en el Castillo de Bowser.")
+    eleccion = input("¿Cuál es tu estrategia? A) Atacar directamente. B) Esperar y esquivar. ")
+    if eleccion.upper() == "A":
+        print("Bowser fue demasiado fuerte. Fin del juego.")
+        return False
+    elif eleccion.upper() == "B":
+        print("Esquivaste sus ataques y ganaste. ¡Has rescatado a la princesa!")
+        return True
+    else:
+        print("Opción no válida. Fin del juego.")
+        return False
+
+def juego():
+    print("¡Bienvenido a Aventura en el Reino Champiñón!")
+    if nivel_1() and nivel_2() and nivel_3():
+        print("¡Felicidades! Has completado el juego.")
+    else:
+        print("Intenta de nuevo.")
+
+juego()
+
